@@ -1,12 +1,11 @@
-Testing specs for recipes:
-name: string
-summary: text
-description: text 
-
--name must be present
--name must be between 5 characters and less than 100
--summary must be present
--summary must be between 10 characters and less than 150
--description must be present
--description must be between 20 and 500 characters
--chef_id must be present
+1. Migrate to create reviews table, body, type= text_field, two foreign jeys, reference chef_id, reference recipe_id
+2. Build Review Model
+3. Test specs, add validations
+4. Build associations, has_many and belongs_to
+5. test associations
+-recipe.reviews
+-chef.reviews
+6. Create routes
+7. Only logged_in users can create reviews, before_action
+8. associate chef_id and recipe_id with reviews (pass to params hash)
+9. Use existing code if possible (text area from add recipe) paginate the reviews
